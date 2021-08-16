@@ -2,7 +2,7 @@
 
 - name: Create New user on Windows Machine
 
-  hosts: windows
+  hosts: windows2016
 
   tasks:
 
