@@ -8,6 +8,6 @@ phases:
       - yum -y install ansible
       - yum -y install python-winrm
       - ansible-playbook -i inventory playbook.yml
-      #- ansible -i inventory windows2016 -m win_ping
+  
 
 
