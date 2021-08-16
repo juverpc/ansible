@@ -6,11 +6,11 @@
 
   tasks:
 
-    - name: Check Windows machines access using win_ping
+    #- name: Check Windows machines access using win_ping
 
-      win_ping:
+    #  win_ping:
 
-      when: ansible_os_family == 'Windows'
+    #  when: ansible_os_family == 'Windows'
 
     
 
