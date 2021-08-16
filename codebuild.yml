@@ -7,6 +7,7 @@ phases:
     commands:
       - yum -y install ansible
       - yum -y install python3-pip
+      - pip install pywinrm
       - python3 -m pip install --user --ignore-installed pywinrm
       - ansible -i inventory windows2016 -m win_ping
 
