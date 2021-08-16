@@ -5,6 +5,10 @@ phases:
   install:
 
     commands:
-      - yum -y update;
-      - yum -y upgrade;
-      
+      - dnf install ansible
+      - yum install epel-release
+      - yum install ansible
+      - yum-y install python3-pip
+      - python3 -m pip install --user --ignore-installed pywinrm
+      - ansible -i inventory windows2016 -m win_ping
+
