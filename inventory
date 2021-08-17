@@ -1,2 +1,2 @@
 [windows2016]
-vm-win2016-dev ansible_host=3.234.229.242
+vm-win2016-dev ansible_host=3.91.206.159
