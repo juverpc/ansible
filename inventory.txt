@@ -1,7 +1,7 @@
 # Sample Inventory File
 
 # Web Servers
-web1 ansible_host=ec2-54-226-149-255.compute-1.amazonaws.com ansible_connection=ssh ansible_user=ec2-user ansible_ssh_pass=PASSWORDWEB1
+web1 ansible_host=ec2-54-226-149-255.compute-1.amazonaws.com ansible_connection=ssh ansible_user=ec2-user ansible_ssh_pass=${VM_PASSWORD}
 
 
 [web_servers]

@@ -1,2 +1,5 @@
 #!/bin/bash
-sed -i "s/PASSWORDWEB1/${VM_PASSWORD}/g" inventory.txt
+while read line
+do
+    eval echo "$line"
+done < "./inventory.txt"
