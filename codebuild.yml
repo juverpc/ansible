@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  secrets-manager:
+    VM_PASSWORD: "TestSecret:vm_linux"
+
 phases:
 
   install:
@@ -7,7 +11,13 @@ phases:
     commands:
       - yum -y install ansible
       - yum -y install python-winrm
-      - ansible-playbook -i inventory playbook.yml
+  
+  pre-build:
+    commands:
+      - chmod +x script.sh
+      - ./script.sh
+      - cat inventory
+      #- ansible-playbook -i inventory playbook.yml
   
 
 
