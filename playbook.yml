@@ -1,22 +1,13 @@
 ---
 
 - name: Create New user on Windows Machine
-
   hosts: windows2016
-
   tasks:   
-
     - name: Create a new User 
-
       win_user:
-
         name: ''
-
         password: ''
-
         state: present
-
         groups:
-
           - Users
       when: ansible_os_family == 'Windows'
