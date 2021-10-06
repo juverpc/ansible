@@ -1,21 +1,9 @@
 import yaml
-import re
 import os
+import json
 
 path_yaml_playbook = "./group_vars/tableau_servers.yml"
-
-# def replace_playbook_values():
-#     read = yaml.safe_load(open(path_yaml_playbook ))
-#     read[0]['tasks'][0]['win_user']['name'] = 'Test'
-#     read[0]['tasks'][0]['win_user']['password'] = os.environ['VM_PASSWORD']
-#     result = yaml.dump(read)
-#     print (result)
-
-# def replace_playbook_values():
-#     with open (path_yaml_playbook) as f:
-#         file = yaml.safe_load(f)
-#     file[0]['tasks'][0]['win_user']['name'] = 'Test'
-#     file[0]['tasks'][0]['win_user']['password'] = os.environ['VM_PASSWORD']
+path_json_file = "./json_file.json"
 
 def replace_tableau_values():
     with open (path_yaml_playbook) as f:
@@ -24,7 +12,16 @@ def replace_tableau_values():
     
     with open(path_yaml_playbook, 'w') as f:
         result = yaml.dump(file, f)
-    print (result)
+    return ('values were replaced')
+
+def replace_json_file():
+    with open (path_json_file) as f:
+        file = json.load(f)
+    file['menu']['id'] = '12'
+
+    with open (path_json_file, 'w') as f:
+       json.dump(file, f)
 
 if __name__ == "__main__":
+    replace_json_file()
     replace_tableau_values()
