@@ -10,9 +10,9 @@
 
       win_user:
 
-        name: 'Juver'
+        name: ''
 
-        password: '{{ansible_ssh_pass}}'
+        password: ''
 
         state: present
 
