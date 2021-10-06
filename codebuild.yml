@@ -15,7 +15,7 @@ phases:
     commands:
       - chmod +x replace.py
       - python3 replace.py
-      - cat playbook.yml
+      - cat ./group_vars/tableau_servers.yml
   # build:
       # - ansible-playbook -i inventory playbook.yml
   
