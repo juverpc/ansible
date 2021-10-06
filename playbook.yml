@@ -4,23 +4,15 @@
 
   hosts: windows2016
 
-  tasks:
-
-    #- name: Check Windows machines access using win_ping
-
-    #  win_ping:
-
-    #  when: ansible_os_family == 'Windows'
-
-    
+  tasks:   
 
     - name: Create a new User 
 
       win_user:
 
-        name: john
+        name: 'Juver'
 
-        password: MyP4ssw0rd
+        password: '{{ansible_ssh_pass}}'
 
         state: present
 
