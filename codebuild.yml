@@ -8,9 +8,10 @@ phases:
   install:
 
     commands:
+      - 
       # - yum -y install ansible
       # - yum -y install python-winrm
-      - echo $VM_PASSWORD 
+      - echo $VM_PASSWORD[json1]
 
   # pre_build:
   #   commands:
