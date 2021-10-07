@@ -13,8 +13,8 @@ phases:
   
   pre_build:
     commands:
-      - chmod +x replace.py
-      - python3 replace.py
+      # - chmod +x replace.py
+      # - python3 replace.py
       - cat ./group_vars/tableau_servers.yml
       - cat ./json_file.json
   # build:
