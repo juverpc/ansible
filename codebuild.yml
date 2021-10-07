@@ -13,6 +13,7 @@ phases:
       - echo $VM_PASSWORD > test.json
       - ls
       - cat test.json
+      
   # pre_build:
   #   commands:
   #     # - chmod +x replace.py
