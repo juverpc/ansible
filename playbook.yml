@@ -6,7 +6,7 @@
     - name: Create a new User 
       win_user:
         name: ''
-        password: ''
+        password: "{{ lookup('env','VM_PASSWORD') }}"
         state: present
         groups:
           - Users
