@@ -5,7 +5,6 @@
   gather_facts: no
   vars:
     api_key: "{{env:VM_PASSWORD}}"
-    api_key: "prueba"
   tasks:
     - name: Basic usage
       debug:
