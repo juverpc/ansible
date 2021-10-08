@@ -3,18 +3,21 @@
   become: yes
   #become_method: runas
   gather_facts: no
-  vars:
-    api_key: "{{env:VM_PASSWORD}}"
+  # vars:
+  #   api_key: "{{env:VM_PASSWORD}}"
     #api_key: "prueba"
   tasks:
+    - name: Basic usage
+      debug:
+        msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
 
  # - name: lookup secretsmanager secret in the current region
  #   debug: msg= "{{ api_key }}"
     #debug: msg="{{ lookup('amazon.aws.aws_secret', 'stage/tableau/wdpr', bypath=true) }}"
 
-  - name: Insert multiple lines and Backup sasauth file
-    blockinfile:
-      path: ./
-      create: yes
-      block: |
-        test "{{ api_key }}"
+  # - name: Insert multiple lines and Backup sasauth file
+  #   blockinfile:
+  #     path: ./
+  #     create: yes
+  #     block: |
+  #       test "{{ api_key }}"
