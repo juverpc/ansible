@@ -8,14 +8,14 @@ phases:
   install:
 
     commands:
-      - yum update -y 
-      - pip3 install boto3
-      - pip3 show boto3
-      - pip3 install botocore
-      - pwd
+      # - yum update -y 
+      # - pip3 install boto3
+      # - pip3 show boto3
+      # - pip3 install botocore
+      # - pwd
+      # - yum -y install python-winrm
+      # - ansible-galaxy collection install amazon.aws
       - yum -y install ansible
-      - yum -y install python-winrm
-      - ansible-galaxy collection install amazon.aws
       - ansible-playbook aws_host.yml -vvv
       #- echo $VM_PASSWORD[0]
 
