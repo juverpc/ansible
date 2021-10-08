@@ -4,7 +4,7 @@
   #become_method: runas
   gather_facts: no
   vars:
-    api_key: "{{ lookup('aws_secret', 'vm_linux') }}"
+    api_key: "{{ lookup('aws_secret', 'vm_linux', 'us-east-1') }}"
     #api_key: "prueba"
   tasks:
 
