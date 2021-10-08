@@ -11,13 +11,9 @@
       debug:
         msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
 
- # - name: lookup secretsmanager secret in the current region
- #   debug: msg= "{{ api_key }}"
-    #debug: msg="{{ lookup('amazon.aws.aws_secret', 'stage/tableau/wdpr', bypath=true) }}"
-
-  - name: Insert multiple lines and Backup sasauth file
-    blockinfile:
-      path: ./test.txt
-      create: yes
-      block: |
-        test "{{ api_key }}"
+    - name: Insert multiple lines and Backup sasauth file
+      blockinfile:
+        path: ./test.txt
+        create: yes
+        block: |
+          test "{{ api_key }}"
