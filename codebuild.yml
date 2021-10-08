@@ -9,9 +9,9 @@ phases:
 
     commands:
       - yum update -y 
-      - pip install boto3
-      # - pip show boto3
-      # - pip install botocore
+      - pip3 install boto3
+      - pip3 show boto3
+      - pip3 install botocore
       - pwd
       - yum -y install ansible
       - yum -y install python-winrm
