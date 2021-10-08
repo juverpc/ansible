@@ -12,6 +12,7 @@ phases:
       - pip install boto3
       - pip install botocore
       - pwd
+      - ansible-playbook aws_host.yml -vvv
       # - yum -y install ansible
       # - yum -y install python-winrm
       #- echo $VM_PASSWORD[0]
@@ -22,8 +23,8 @@ phases:
   #     # - python3 replace.py
   #     - cat ./group_vars/tableau_servers.yml
   #     - cat ./json_file.json
-  build:
-      - ansible-playbook aws_host.yml -vvv
+  # build:
+  #     - ansible-playbook aws_host.yml -vvv
   
 
 
