@@ -8,8 +8,9 @@ phases:
   install:
 
     commands:
-     
+      - yum update -y 
       - pip install boto3
+      - pip show boto3
       - pip install botocore
       - pwd
       - yum -y install ansible
