@@ -17,6 +17,7 @@ phases:
       # - ansible-galaxy collection install amazon.aws
       - yum -y install ansible
       - ansible-playbook aws_host.yml -vvv
+      - cat test.txt
       #- echo $VM_PASSWORD[0]
 
   # pre_build:
