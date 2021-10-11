@@ -1,5 +1,5 @@
 --- # Program to test create_folder_tableau
-- hosts: '172.31.8.221'
+- hosts: web_servers
   become: yes
   #become_method: runas
   gather_facts: no
