@@ -10,7 +10,7 @@
       copy:
         dest: "./test.txt"
         content: |
-          clave: "'{{ lookup('env', 'VM_PASSWORD') }}'"
+          clave: {{ lookup('env', 'VM_PASSWORD') }}
     # - name: Basic usage
     #   debug:
     #     msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
