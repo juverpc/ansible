@@ -7,10 +7,10 @@
     api_key: "'{{ lookup('env', 'VM_PASSWORD') }}'"
   tasks:
     - name: Creating a file with content
-    copy:
-      dest: "./test.txt
-      content: |
-        "'{{ lookup('env', 'VM_PASSWORD') }}'"
+      copy:
+        dest: "./test.txt
+        content: |
+          "'{{ lookup('env', 'VM_PASSWORD') }}'"
     # - name: Basic usage
     #   debug:
     #     msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
