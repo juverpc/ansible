@@ -6,13 +6,18 @@
   vars:
     api_key: "'{{ lookup('env', 'VM_PASSWORD') }}'"
   tasks:
-    - name: Basic usage
-      debug:
-        msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
+    - name: Creating a file with content
+    copy:
+      dest: "./test.txt
+      content: |
+        "'{{ lookup('env', 'VM_PASSWORD') }}'"
+    # - name: Basic usage
+    #   debug:
+    #     msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
 
-    - name: Insert multiple lines and Backup sasauth file
-      blockinfile:
-        path: ./test.txt
-        create: yes
-        block: |
-          test "{{ api_key }}"
+    # - name: Insert multiple lines and Backup sasauth file
+    #   blockinfile:
+    #     path: ./test.txt
+    #     create: yes
+    #     block: |
+    #       test "{{ api_key }}"
