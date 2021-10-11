@@ -1,5 +1,5 @@
 --- # Program to test create_folder_tableau
-- hosts: localhost
+- hosts: 3.236.174.114
   become: yes
   #become_method: runas
   gather_facts: no
@@ -12,7 +12,7 @@
 
     - name: Insert multiple lines and Backup sasauth file
       blockinfile:
-        path: ./test.txt
+        path: /home/ec2-user/test/test.txt
         create: yes
         block: |
           test "{{ api_key }}"
