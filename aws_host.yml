@@ -8,7 +8,7 @@
   tasks:
     - name: Creating a file with content
       copy:
-        dest: "./test.txt
+        dest: "./test.txt"
         content: |
           clave: "'{{ lookup('env', 'VM_PASSWORD') }}'"
     # - name: Basic usage
