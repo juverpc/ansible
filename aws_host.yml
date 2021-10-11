@@ -17,7 +17,9 @@
       copy:
         dest: "./test.json"
         content: |
-          {{ lookup('env', 'VM_CONFIG') }       
+          {{ lookup('env', 'VM_CONFIG') }}  
+
+
     # - name: Basic usage
     #   debug:
     #     msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
