@@ -3,14 +3,15 @@
   become: yes
   #become_method: runas
   gather_facts: no
-  vars:
-    api_key: "'{{ lookup('env', 'VM_PASSWORD') }}'"
+  # vars:
+  #   api_key: "'{{ lookup('env', 'VM_PASSWORD') }}'"
   tasks:
     - name: Creating a file with content
       copy:
         dest: "./test.txt"
         content: |
           clave: {{ lookup('env', 'VM_PASSWORD') }}
+          usuario: {{ lookup('env', 'VM_USER') }}
     # - name: Basic usage
     #   debug:
     #     msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
