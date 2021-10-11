@@ -12,6 +12,13 @@
         content: |
           clave: {{ lookup('env', 'VM_PASSWORD') }}
           usuario: {{ lookup('env', 'VM_USER') }}
+
+    - name: Creating a file with content
+      copy:
+        dest: "./test.json"
+        content: |
+          {{ lookup('env', 'VM_CONFIG') }}
+       
     # - name: Basic usage
     #   debug:
     #     msg: "'{{ lookup('env', 'VM_PASSWORD') }}'"
