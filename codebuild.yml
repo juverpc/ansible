@@ -9,16 +9,10 @@ phases:
   install:
 
     commands:
-      # - yum update -y 
-      # - pip3 install boto3
-      # - pip3 show boto3
-      # - pip3 install botocore
-      # - pwd
-      # - yum -y install python-winrm
-      # - ansible-galaxy collection install amazon.aws
+     
       - yum -y install ansible
       - ansible-playbook aws_host.yml -vvv
-      - cat test.txt
+      # - cat test.txt
       #- echo $VM_PASSWORD[0]
 
   # pre_build:
@@ -27,6 +21,13 @@ phases:
   #     # - python3 replace.py
   #     - cat ./group_vars/tableau_servers.yml
   #     - cat ./json_file.json
+  # - yum update -y 
+    # - pip3 install boto3
+    # - pip3 show boto3
+    # - pip3 install botocore
+    # - pwd
+    # - yum -y install python-winrm
+    # - ansible-galaxy collection install amazon.aws
   # build:
   #     - ansible-playbook aws_host.yml -vvv
   
