@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   secrets-manager:
-    VM_PASSWORD: arn:aws:secretsmanager:${AWS_REGION}:${AWS_ACCOUNT}:secret:vm_linux-2hdUKB:password
-    VM_USER: arn:aws:secretsmanager:${AWS_REGION}:${AWS_ACCOUNT}:secret:vm_linux-2hdUKB:user             
+    VM_PASSWORD: arn:aws:secretsmanager:${AWS_REGION}:624733648801:secret:vm_linux-2hdUKB:password
+    VM_USER: arn:aws:secretsmanager:${AWS_REGION}:624733648801:secret:vm_linux-2hdUKB:user             
 phases:
 
   install:
