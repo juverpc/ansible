@@ -1,33 +1,17 @@
 version: 0.2
-
-env:
-  secrets-manager:
-    VM_PASSWORD: arn:aws:secretsmanager:${AWS_REGION}:624733648801:secret:vm_linux-2hdUKB:password
-    VM_USER: arn:aws:secretsmanager:${AWS_REGION}:624733648801:secret:vm_linux-2hdUKB:user
-    VM_CONFIG: arn:aws:secretsmanager:${AWS_REGION}:624733648801:secret:vm_linux-2hdUKB:config              
+              
 phases:
 
   install:
-
-    commands:
-     
-      - yum -y install ansible
-      - ansible-playbook -i inventory aws_host.yml -vvv
-      - aws s3 cp test.txt s3://different-test-juver/upload/test.txt
-      - aws s3 cp test.json s3://different-test-juver/upload/test.json
-      # - cat test.txt
-      #- echo $VM_PASSWORD[0]
-
-  # pre_build:
-  #   commands:
-  #     # - chmod +x replace.py
-  #     # - python3 replace.py
-  #     - cat ./group_vars/tableau_servers.yml
-  #     - cat ./json_file.json
-  # - yum update -y 
-  # - yum -y install python-winrm
-  # build:
-  #     - ansible-playbook aws_host.yml -vvv
+    commands:   
+      - yum update -y  
+      - yum install -y python3-winrm
+      - yum install -y software-properties-common
+      - add-apt-repository --yes --update ppa:ansible/ansible
+      - yum install -y ansible
+      - ansible-galaxy collection install ansible.windows     
   
-
+  build:
+    commands:  
+      - ansible-playbook test-playbook.yml -vvv
 

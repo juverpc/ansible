@@ -1,0 +1,7 @@
+---
+#roles/new_dir/tasks/main.yml
+
+- name: Create directory tableau silent install
+  win_file:
+    path: "{{ new_dir_temp }}"
+    state: directory
