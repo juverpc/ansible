@@ -1,1 +1,3 @@
+---
+#roles/new_dir/vars/main.yml
 new_dir_temp: c:\TEMP\test
