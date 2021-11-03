@@ -2,5 +2,4 @@
 
 [servers]
 server1 ansible_host= 
-server2 ansible_host=
 
