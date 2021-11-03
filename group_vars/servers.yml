@@ -1,7 +1,7 @@
 #Example
 
 ansible_password: "{{ lookup('env','VM_PASSWORD') }}"
-ansible_user: "{{ lookup('env', 'TABLEAU_USER') }}"
+ansible_user: "{{ lookup('env', 'VM_USER') }}"
 ansible_connection: winrm
 ansible_winrm_transport: ntlm
 ansible_port: 5985
