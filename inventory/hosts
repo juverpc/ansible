@@ -1,5 +1,5 @@
-# Sample Inventory File
+# Sample Inventory File 3.237.104.146
 
 [servers]
-server1 ansible_host=3.237.104.146
+server1 ansible_host=ec2-3-237-104-146.compute-1.amazonaws.com 
 
