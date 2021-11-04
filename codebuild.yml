@@ -5,10 +5,10 @@ phases:
   install:
     commands:   
       - yum update -y  
-      - yum install -y python3-winrm
-      - yum install -y software-properties-common
+      - yum install python3-winrm -y
+      - yum install software-properties-common -y
       - add-apt-repository --yes --update ppa:ansible/ansible
-      - yum install -y ansible
+      - yum install ansible -y
       - ansible-galaxy collection install ansible.windows     
   
   build:
