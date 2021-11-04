@@ -9,9 +9,8 @@ phases:
       # - yum install software-properties-common -y
       # - add-apt-repository --yes --update ppa:ansible/ansible
       - yum -y install ansible
-      - yum -y install python-pip pip
-      - pip install pywinrm
-      - pip install "pywinrm>=0.2.2"
+      - pip3 install pywinrm
+      - pip3 install "pywinrm>=0.2.2"
       - ansible-galaxy collection install ansible.windows     
   
   build:
