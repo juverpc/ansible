@@ -5,11 +5,11 @@ phases:
   install:
     commands:   
       - yum update -y  
-      # - yum install python3-winrm -y
-      # - yum install software-properties-common -y
-      # - add-apt-repository --yes --update ppa:ansible/ansible
+      - pip3 install python3-winrm -y
+      - yum install software-properties-common -y
+      - add-apt-repository --yes --update ppa:ansible/ansible
       - yum -y install ansible
-      - pip3 install pywinrm
+      #- pip3 install pywinrm
       - ansible-galaxy collection install ansible.windows     
   
   build:
