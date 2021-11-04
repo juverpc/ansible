@@ -10,7 +10,6 @@ phases:
       # - add-apt-repository --yes --update ppa:ansible/ansible
       - yum -y install ansible
       - pip3 install pywinrm
-      - pip3 install "pywinrm>=0.2.2"
       - ansible-galaxy collection install ansible.windows     
   
   build:
